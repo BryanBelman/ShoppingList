@@ -3,3 +3,6 @@
   }
   
   .lh-condensed { line-height: 1.25; }
+.alerta{
+  display: none;
+}
