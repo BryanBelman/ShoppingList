@@ -4,7 +4,7 @@ let guardarelementos = [];
 
 window.onload = ()=>{
     
-    let lstorage = localStorage.getItem("guardar");
+    let lstorage =JSON.parse (localStorage.getItem("guardar"));
     for(let i=0; i<lstorage.length; i++){
         crearelementos(lstorage[i]);
     }
@@ -50,7 +50,7 @@ function agregarlistas(savename, savenumber) {
 
     id = id + 1;
     guardarelementos.push(agregar);
-    localStorage.setItem("guardar", agregar);
+    localStorage.setItem("guardar", JSON.stringify(guardarelementos));
 
 }
 
